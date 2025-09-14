@@ -44,7 +44,7 @@
       background: #007bff;
       color: #fff;
       font-weight: bold;
-      font-family: Manrope;
+      font-family: DM Sans;
     }
     .moon-container {
       display: flex;
@@ -170,7 +170,7 @@
     }
 
     function julianHorizontal(date){
-        const julianDate = new Date(date.getTime() - 14*DAY_MS);
+        const julianDate = new Date(date.getTime() - 13*DAY_MS);
         const day = julianDate.getDate();
         const month = julianDate.getMonth() + 1;
         const year = julianDate.getFullYear();
@@ -225,7 +225,7 @@
       document.getElementById('greg-weekday').textContent = gregWeekdays[date.getDay()];
 
       document.getElementById('julian').innerHTML = julianHorizontal(date);
-      document.getElementById('julian-weekday').textContent = gregWeekdays[new Date(date.getTime()-14*DAY_MS).getDay()];
+      document.getElementById('julian-weekday').textContent = gregWeekdays[new Date(date.getTime()-13*DAY_MS).getDay()];
 
       document.getElementById('hebrew').innerHTML = hebrewHorizontal(date);
       document.getElementById('hebrew-weekday').textContent = hebWeekdays[date.getDay()];
